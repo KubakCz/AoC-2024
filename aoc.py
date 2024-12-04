@@ -1,12 +1,14 @@
-from typing import List
+from typing import List, Iterable
 import os
 import argparse
 import solutions.day_01
 import solutions.day_02
+import solutions.day_03
 
 solve_functions = [
     (solutions.day_01.solve_1, solutions.day_01.solve_2),
     (solutions.day_02.solve_1, solutions.day_02.solve_2),
+    (solutions.day_03.solve_1, solutions.day_03.solve_2),
 ]
 
 
@@ -19,10 +21,20 @@ def get_input_files(day: int, include_samples: bool = False) -> List[str]:
     if not os.path.exists("inputs"):
         raise FileNotFoundError("The 'inputs' directory does not exist.")
     day_str = f"{day:02d}"
-    files = filter(lambda x: day_str in x, os.listdir("inputs"))
+    files: Iterable[str] = filter(lambda x: day_str in x, os.listdir("inputs"))
     if not include_samples:
         # filter out the sample files
-        files = filter(lambda x: "e" not in x, files)
+        files = filter(lambda x: "_e" not in x, files)
+    else:
+        # examples first
+        examples = []
+        not_examples = []
+        for f in files:
+            if "_e" in f:
+                examples.append(f)
+            else:
+                not_examples.append(f)
+        files = examples + not_examples
     return [f"inputs/{f}" for f in files]
 
 

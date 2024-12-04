@@ -1,4 +1,4 @@
-from typing import  Generator, List
+from typing import Generator, List
 
 
 def parse_report(report: str) -> List[int]:

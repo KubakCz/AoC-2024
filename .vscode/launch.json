@@ -10,7 +10,7 @@
       "request": "launch",
       "program": "aoc.py",
       "console": "integratedTerminal",
-      "args": ["${command:pickArgs}"]
+      "args": ["${command:pickArgs}", "-e"]
     }
   ]
 }
