@@ -2,9 +2,11 @@ from typing import List
 import os
 import argparse
 import solutions.day_01
+import solutions.day_02
 
 solve_functions = [
     (solutions.day_01.solve_1, solutions.day_01.solve_2),
+    (solutions.day_02.solve_1, solutions.day_02.solve_2),
 ]
 
 
@@ -38,7 +40,7 @@ if __name__ == "__main__":
         exit(1)
 
     # Get the input files
-    input_files = get_input_files(args.day, args.samples)
+    input_files = get_input_files(args.day, args.examples)
     if len(input_files) == 0:
         print("No input files found")
         exit(1)
