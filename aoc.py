@@ -5,12 +5,14 @@ import solutions.day_01
 import solutions.day_02
 import solutions.day_03
 import solutions.day_04
+import solutions.day_05
 
 solve_functions = [
     (solutions.day_01.solve_1, solutions.day_01.solve_2),
     (solutions.day_02.solve_1, solutions.day_02.solve_2),
     (solutions.day_03.solve_1, solutions.day_03.solve_2),
     (solutions.day_04.solve_1, solutions.day_04.solve_2),
+    (solutions.day_05.solve_1, solutions.day_05.solve_2),
 ]
 
 
