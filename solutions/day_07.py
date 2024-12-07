@@ -1,3 +1,4 @@
+from math import ceil, log10
 from typing import List, Tuple, Callable
 import operator
 
@@ -13,12 +14,7 @@ def parse_line(line: str) -> Tuple[int, List[int]]:
 
 
 def concatenate(a: int, b: int) -> int:
-    len_b = 0
-    tmp = b
-    while tmp > 0:
-        len_b += 1
-        tmp //= 10
-    return a * 10 ** len_b + b
+    return a * 10 ** ceil(log10(b)) + b
 
 
 def test_equation_recursive(
