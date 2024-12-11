@@ -11,6 +11,7 @@ import solutions.day_07
 import solutions.day_08
 import solutions.day_09
 import solutions.day_10
+import solutions.day_11
 
 solve_functions = [
     (solutions.day_01.solve_1, solutions.day_01.solve_2),
@@ -23,6 +24,7 @@ solve_functions = [
     (solutions.day_08.solve_1, solutions.day_08.solve_2),
     (solutions.day_09.solve_1, solutions.day_09.solve_2),
     (solutions.day_10.solve_1, solutions.day_10.solve_2),
+    (solutions.day_11.solve_1, solutions.day_11.solve_2),
 ]
 
 
